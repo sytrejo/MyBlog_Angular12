@@ -1,0 +1,31 @@
+1. npx @angular/cli@12 new my-blog --routing --style=scss
+    -npm install bootstrap
+    -add @import "~bootstrap/scss/bootstrap";
+
+2. ng generate module core
+3. ng generate component header --path=src/app/core --module=core --export
+    - create the header.component.html
+4. ng generate module shared
+5. ng generate component footer --path=src/app/shared --module=shared --export
+    - add date funtion to footer.component.this
+    - add html code to footer.component.html (Displays only date )
+6. Oppen the app.module.ts file and add the imports for the new components
+7. ng generate module contact
+8. ng generate component contact --path=src/app/contact --module=contact --export --flat
+    - add the picture to the asset folder
+    - add the html to the contact.component.html
+9. add routes in the app-routing.module.ts file
+10. add contactModule to the imports in the app.module.ts file
+11. add the router-outlet directive in the app.component.html
+12. Go back to the header.component.html file and add the routerLink
+13. Import the RouterModule in the core.module.ts file
+14. ng generate module articles --route=articles --module=app-routing
+15 add the routerLink to the article element in the header.component.html file.
+
+
+Set-up
+1. use legacy node.js change the package.json file to use npm start
+    "scripts": {
+        "start": "export NODE_OPTIONS=--openssl-legacy-provider && ng serve"
+    }
+
